@@ -15,11 +15,15 @@ with t, and replaces that with toilet.
 
 std::expected<std::string, zdm::toilet_error_code>
 zdm::get_toiletified_word(
-    [[maybe_unused]]
     const std::string&                  a_word
 )
 {
-    return "";
+    if( a_word.find( ' ' ) != std::string::npos )
+    {
+        return std::unexpected( zdm::toilet_error_code::string_has_space );
+    }
+
+    return std::expected<std::string, zdm::toilet_error_code>( std::string( "" ) );
 }
 
 
