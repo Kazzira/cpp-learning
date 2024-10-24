@@ -10,6 +10,9 @@ toilet.hpp
 Transforms a word that has a substring that beings with t, middle l and ends
 with t, and replaces that with toilet.
 */
+#include <regex>
+
+
 #include "zdm/toilet.hpp"
 
 
@@ -18,12 +21,25 @@ zdm::get_toiletified_word(
     const std::string&                  a_word
 )
 {
+    static const std::regex             toilet_matcher(R"([Tt][^Tt]+[Ll][^Tt]+[Tt])");
+
     if( a_word.find( ' ' ) != std::string::npos )
     {
         return std::unexpected( zdm::toilet_error_code::string_has_space );
     }
 
-    return std::expected<std::string, zdm::toilet_error_code>( std::string( "" ) );
+    std::string                         new_word = std::regex_replace(
+        a_word
+    ,   toilet_matcher
+    ,   "toilet"
+    );
+
+    if( new_word == a_word )
+    {
+        return std::unexpected( zdm::toilet_error_code::invalid_word );
+    }
+
+    return std::expected<std::string, zdm::toilet_error_code>( std::move( new_word ) );
 }
 
 

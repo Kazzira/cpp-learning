@@ -58,6 +58,20 @@ TEST_CASE(
 }
 
 
+TEST_CASE(
+    "zdm::get_toiletified_word: test that totalitarian returns totoiletarian"
+,   "[unit-test][zdm][zdm::get_toiletified_word]"
+)
+{
+    std::string                         input {"totalitarian"};
+    std::expected<std::string, zdm::toilet_error_code>
+                                        result = zdm::get_toiletified_word( input );
+
+    REQUIRE( result );
+    REQUIRE( *result == std::string( "totoiletarian" ) );
+}
+
+
 /*
 MIT License
 
