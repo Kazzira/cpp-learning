@@ -11,6 +11,7 @@ Transforms a word that has a substring that beings with t, middle l and ends
 with t, and replaces that with toilet.
 */
 #include <regex>
+#include <string_view>
 
 
 #include "zdm/toilet.hpp"
@@ -18,7 +19,7 @@ with t, and replaces that with toilet.
 
 std::expected<std::string, zdm::toilet_error_code>
 zdm::get_toiletified_word(
-    const std::string&                  a_word
+    std::string_view                    a_word
 )
 {
     static const std::regex             toilet_matcher(R"([Tt][^Tt]+[Ll][^Tt]+[Tt])");
@@ -29,7 +30,7 @@ zdm::get_toiletified_word(
     }
 
     std::string                         new_word = std::regex_replace(
-        a_word
+        a_word.data()
     ,   toilet_matcher
     ,   "toilet"
     );

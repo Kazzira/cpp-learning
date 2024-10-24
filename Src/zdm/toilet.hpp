@@ -17,6 +17,7 @@ with t, and replaces that with toilet.
 #include <cstdint>
 #include <expected>
 #include <string>
+#include <string_view>
 
 
 namespace zdm {
@@ -32,7 +33,7 @@ enum class toilet_error_code : std::int8_t
 //! \brief TODO: Describe
 std::expected<std::string, toilet_error_code>
 get_toiletified_word(
-    const std::string&                  a_word
+    std::string_view                    a_word
 );
 
 
