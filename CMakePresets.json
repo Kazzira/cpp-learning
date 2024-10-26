@@ -57,7 +57,7 @@
         },
         "VCPKG_TARGET_TRIPLET": {
           "type": "STRING",
-          "value": "x64-windows-static"
+          "value": "x64-windows"
         }
       }
     },
@@ -71,7 +71,7 @@
         },
         "VCPKG_TARGET_TRIPLET": {
           "type": "STRING",
-          "value": "x64-linux"
+          "value": "x64-linux-dynamic"
         }
       }
     },
@@ -123,6 +123,14 @@
           "type": "string",
           "value": "/EHsc /MP /W4 /WX /external:anglebrackets /external:W0 /std:c++latest"
         },
+        "CMAKE_C_COMPILER": {
+          "type": "STRING",
+          "value": "cl"
+        },
+        "CMAKE_CXX_COMPILER": {
+          "type": "STRING",
+          "value": "cl"
+        },
         "CMAKE_CXX_FLAGS_RELEASE": {
           "type": "STRING",
           "value": "/Ox /Ob3"
@@ -141,7 +149,7 @@
         },
         "CMAKE_MSVC_RUNTIME_LIBRARY": {
           "type": "STRING",
-          "value": "MultiThreaded$<$<CONFIG:Debug>:Debug>"
+          "value": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
         }
       }
     },
