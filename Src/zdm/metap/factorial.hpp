@@ -36,6 +36,95 @@ struct factorial<0>
 }}
 
 
+/// Instantiate templates.
+/// More for demonstration purposes than anything, since it's just one value.
+#ifdef CPPLEARNING_ITEMPLATE_ZDM_METAP_FACTORIAL
+    template struct zdm::metap::factorial<0>;
+    template struct zdm::metap::factorial<1>;
+    template struct zdm::metap::factorial<2>;
+    template struct zdm::metap::factorial<3>;
+    template struct zdm::metap::factorial<4>;
+    template struct zdm::metap::factorial<5>;
+    template struct zdm::metap::factorial<6>;
+    template struct zdm::metap::factorial<7>;
+    template struct zdm::metap::factorial<8>;
+    template struct zdm::metap::factorial<9>;
+    template struct zdm::metap::factorial<10>;
+    template struct zdm::metap::factorial<11>;
+    template struct zdm::metap::factorial<12>;
+    template struct zdm::metap::factorial<13>;
+    template struct zdm::metap::factorial<14>;
+    template struct zdm::metap::factorial<15>;
+    template struct zdm::metap::factorial<16>;
+    template struct zdm::metap::factorial<17>;
+    template struct zdm::metap::factorial<18>;
+    template struct zdm::metap::factorial<19>;
+    template struct zdm::metap::factorial<20>;
+    template struct zdm::metap::factorial<21>;
+    template struct zdm::metap::factorial<22>;
+    template struct zdm::metap::factorial<23>;
+    template struct zdm::metap::factorial<24>;
+    template struct zdm::metap::factorial<25>;
+    template struct zdm::metap::factorial<26>;
+    template struct zdm::metap::factorial<27>;
+    template struct zdm::metap::factorial<28>;
+    template struct zdm::metap::factorial<29>;
+    template struct zdm::metap::factorial<30>;
+    template struct zdm::metap::factorial<31>;
+    template struct zdm::metap::factorial<32>;
+    template struct zdm::metap::factorial<33>;
+    template struct zdm::metap::factorial<34>;
+    template struct zdm::metap::factorial<35>;
+    template struct zdm::metap::factorial<36>;
+    template struct zdm::metap::factorial<37>;
+    template struct zdm::metap::factorial<38>;
+    template struct zdm::metap::factorial<39>;
+    template struct zdm::metap::factorial<40>;
+#else
+    extern template struct zdm::metap::factorial<0>;
+    extern template struct zdm::metap::factorial<1>;
+    extern template struct zdm::metap::factorial<2>;
+    extern template struct zdm::metap::factorial<3>;
+    extern template struct zdm::metap::factorial<4>;
+    extern template struct zdm::metap::factorial<5>;
+    extern template struct zdm::metap::factorial<6>;
+    extern template struct zdm::metap::factorial<7>;
+    extern template struct zdm::metap::factorial<8>;
+    extern template struct zdm::metap::factorial<9>;
+    extern template struct zdm::metap::factorial<10>;
+    extern template struct zdm::metap::factorial<11>;
+    extern template struct zdm::metap::factorial<12>;
+    extern template struct zdm::metap::factorial<13>;
+    extern template struct zdm::metap::factorial<14>;
+    extern template struct zdm::metap::factorial<15>;
+    extern template struct zdm::metap::factorial<16>;
+    extern template struct zdm::metap::factorial<17>;
+    extern template struct zdm::metap::factorial<18>;
+    extern template struct zdm::metap::factorial<19>;
+    extern template struct zdm::metap::factorial<20>;
+    extern template struct zdm::metap::factorial<21>;
+    extern template struct zdm::metap::factorial<22>;
+    extern template struct zdm::metap::factorial<23>;
+    extern template struct zdm::metap::factorial<24>;
+    extern template struct zdm::metap::factorial<25>;
+    extern template struct zdm::metap::factorial<26>;
+    extern template struct zdm::metap::factorial<27>;
+    extern template struct zdm::metap::factorial<28>;
+    extern template struct zdm::metap::factorial<29>;
+    extern template struct zdm::metap::factorial<30>;
+    extern template struct zdm::metap::factorial<31>;
+    extern template struct zdm::metap::factorial<32>;
+    extern template struct zdm::metap::factorial<33>;
+    extern template struct zdm::metap::factorial<34>;
+    extern template struct zdm::metap::factorial<35>;
+    extern template struct zdm::metap::factorial<36>;
+    extern template struct zdm::metap::factorial<37>;
+    extern template struct zdm::metap::factorial<38>;
+    extern template struct zdm::metap::factorial<39>;
+    extern template struct zdm::metap::factorial<40>;
+#endif
+
+
 #endif // __CPPLEARNING_ZDM_METAP_FACTORIAL_HPP__
 
 

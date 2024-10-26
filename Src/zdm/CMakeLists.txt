@@ -1,11 +1,8 @@
-SET(ZDM_SOURCE_FILES
-  "${SOURCE_DIR}/zdm/toilet.cpp"
-)
-
 add_library(
   zdm
-  STATIC
-  ${ZDM_SOURCE_FILES}
+  SHARED
+  "${SOURCE_DIR}/zdm/toilet.cpp"
+  "${SOURCE_DIR}/zdm/metap/factorial.cpp"
 )
 
 target_include_directories(
