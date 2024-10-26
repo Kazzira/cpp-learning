@@ -2,6 +2,7 @@ SET(TEST_SOURCE_DIR "${ROOT_DIR}/Tests")
 
 SET(TEST_SOURCE_FILES
   "${TEST_SOURCE_DIR}/zdm/toilet.test.cpp"
+  "${TEST_SOURCE_DIR}/zdm/metap/if.test.cpp"
 )
 
 add_executable(
