@@ -2,6 +2,7 @@
   "name": "cpp-learning",
   "version-string": "1",
   "dependencies": [
+    "qt"
   ],
   "default-features": [
     "tests"
