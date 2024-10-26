@@ -20,19 +20,16 @@ TEST_CASE(
 ,   "[unit-test][zdm::metap][zdm::metap::if_s]"
 )
 {
-    constexpr bool                      false_value = false;
-    constexpr bool                      true_value  = true;
-
     STATIC_REQUIRE(
         std::is_same_v<
-            zdm::metap::if_s<true_value, std::size_t, double>::type
+            zdm::metap::if_s<true, std::size_t, double>::type
         ,   std::size_t
         >
     );
 
     STATIC_REQUIRE(
         std::is_same_v<
-            zdm::metap::if_s<false_value, std::size_t, double>::type
+            zdm::metap::if_s<false, std::size_t, double>::type
         ,   double
         >
     );
